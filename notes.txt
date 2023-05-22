@@ -1,2 +1,16 @@
-Insert is 806.8 ms
+1. Insert is 806.8 ms
 Appen is 11.9 ms
+
+2. Results for the extraLargeArray
+insert extraLargeArray 849.002907 ms
+append extraLargeArray 4.553424 ms
+insert tinyArray 64.28 μs
+append tinyArray 50.365 μs
+insert smallArray 6.346 μs
+append smallArray 3.847 μs
+insert mediumArray 79.519 μs
+append mediumArray 7.457 μs
+insert largeArray 6.272844 ms
+append largeArray 109.471 μs
+
+3. 

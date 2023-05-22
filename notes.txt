@@ -1,0 +1,2 @@
+Insert is 806.8 ms
+Appen is 11.9 ms

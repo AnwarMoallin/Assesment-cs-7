@@ -1,29 +1,61 @@
-const perf = require("execution-time")();
-
-function addZero(arrNum) {
-  for (let i = 0; i <= arrNum.length; i++) {
-    console.log(arrNum[i]);
-    if (arrNum[i] + arrNum[i] === 0) {
-      return true;
+// 1. write func takes in array of nums, should return true of any two nums sum up to zero, false otherwise.
+const addToZero = function (arr) {
+  // loops through each array value
+  for (let i = 0; i < arr.length; i++) {
+    // another loop to compare another value
+    for (let n = 0; n < arr.length; n++) {
+      if (arr[i] - arr[n] === 0) {
+        return console.log("this is true");
+      }
     }
-    return false;
   }
+  return console.log("this isfalse");
+};
+
+addToZero([1, 2, 3, -2]);
+addToZero(1, 2, 3);
+addToZero([1]);
+
+console.log("======= Unique Characters ========");
+
+// 2. takes in a single word, returns true if word contains unique chars, false otherwise.
+function hasUniqueChars(str) {
+  const isUnique = new Set(str).size == str.length;
+  console.log(isUnique);
 }
-addZero([1, 22, 3, 4, 5]);
 
-function hasUniqueChar() {}
+hasUniqueChars("Monday");
+hasUniqueChars("Moonday");
 
-function isPangram() {}
+console.log("======= Pangrams ========");
 
-perf.start();
-function longestWord(one, two) {
-  if (one.length > two.length) {
-    return console.log(one.length);
-  } else {
-    return console.log(two.length);
+// 3. write func to check if a string is a pangram or now
+const isPangram = function (str) {
+  for (let i = 0; i < str.length; i++) {
+    console.log(i);
+    for (let s = 0; s < str.length; s++) {
+      if (!(i === s)) {
+        return console.log(true);
+      }
+    }
   }
-}
-longestWord("Hello", "Abracadabraaaa");
-let longestsWordsTime = perf.stop();
+  return console.log(false);
+};
+isPangram("The quick brown fox jumps over the lazy dog");
+isPangram("I like cats, but not mice");
 
-console.log("Time:", longestsWordsTime.preciseWords);
+console.log("======= Longests Word ========");
+
+// 4. Longest word takes a list of words, returns the longest one
+function find_longest_word(arr) {
+  let word = "";
+
+  for (let i = 0; i < arr.length; i++) {
+    if (word.length < arr[i].length) {
+      word = arr[i];
+    }
+  }
+
+  return console.log(word);
+}
+find_longest_word(["HelloWorld", "Hi"]);

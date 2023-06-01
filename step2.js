@@ -4,7 +4,7 @@ const addToZero = function (arr) {
   for (let i = 0; i < arr.length; i++) {
     // another loop to compare another value
     for (let n = 0; n < arr.length; n++) {
-      if (arr[i] - arr[n] === 0) {
+      if (arr[i] + arr[n] === 0) {
         return console.log("this is true");
       }
     }
@@ -56,6 +56,6 @@ function find_longest_word(arr) {
     }
   }
 
-  return console.log(word);
+  return console.log(word.length);
 }
 find_longest_word(["HelloWorld", "Hi"]);
